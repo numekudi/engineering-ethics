@@ -7,13 +7,11 @@
 - **engineering-ethics** — 綱領（8原則・80項目）の知識スキル。開発中に倫理を参照する。
 - **ethics-audit** — リポジトリを綱領＋ダークパターン観点で**監査・採点**するハーネス。
 
-## なぜ「監査」なのか
+## 使い方の姿勢
 
-上のバッジのような「遵守済み」表示は、それ自体は**自己申告**にすぎない。RINRI ライセンスが
-戒める *ethical grandstanding*（実質の裏付けなく倫理を掲げる行為）に陥りうる。
-`ethics-audit` は、綱領の具体項目に照らし、**実コードを読んだ上で・敵対的に検証して**採点する
-ことで、その自己申告を「監査で確かめられるもの」に近づける。他者糾弾ではなく、**自リポの
-自己評価と改善**のための道具である。
+`ethics-audit` は、綱領の具体項目に照らし**実コードを読んだ上で・敵対的に検証して**採点する。
+他者を裁くためではなく、**自リポの自己評価と改善**のために使う。迷ったら証跡（`file:line`）に
+立ち返り、公共の利益を中心に考える。
 
 ## 使い方
 
@@ -62,5 +60,5 @@ npm test           # ユニットテスト（node --test / tsx）
 ## 出典・ライセンス
 
 - 綱領原典: [ソフトウェア工学の倫理ならびに専門技術者実務綱領（ACM・日本語訳 PDF）](https://www.acm.org/binaries/content/assets/code-of-ethics/se-code-jpn.pdf)（© 1999 IEEE/ACM・日本語訳 村田 潔）
-- 綱領データと反-grandstanding の思想は [EdamAme-x/rinri](https://github.com/EdamAme-x/rinri) を参考にしている。
+- 綱領データは [EdamAme-x/rinri](https://github.com/EdamAme-x/rinri) を参考にしている。
 - 本リポジトリのコードは MIT License。

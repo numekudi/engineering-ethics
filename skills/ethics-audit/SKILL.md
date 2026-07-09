@@ -84,6 +84,8 @@ node <SKILL_DIR>/lib/cli.js tweet --input audit.json --label <名前>  # 共有�
 2. AuditResult JSON を保存し、
    `node <SKILL_DIR>/lib/cli.js tweet --input <audit.json> --label <リポ名> --format text` で
    共有下書き（本文＋intent URL、`#技術者倫理チェックskill`）を生成し提示する。
+   **intent URL は CLI の出力を1行で・全文そのまま貼る（`...` で省略・途中改行・整形をしない）。**
+   詳細は `05-output-format.md` の「intent URL を絶対に省略しない」を厳守する。
 3. ツイートは**自リポの自己監査結果の共有**であることを明示する。他者を糾弾する用途には
    使わない（原則6・8／RINRI の精神）。
 
