@@ -1,0 +1,8 @@
+# 開発時の依存（配布スキルには含めない）
+cli/node_modules/
+
+# ビルド出力 skills/ethics-audit/lib/*.js は「配布実体」なので追跡する（無視しない）。
+
+# エディタ・OS
+.DS_Store
+*.log

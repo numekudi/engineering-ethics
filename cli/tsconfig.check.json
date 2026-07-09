@@ -1,0 +1,10 @@
+{
+  // 型チェック専用: src/ に加え gen/ と tests/ も含めて noEmit で検証する。
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "rootDir": ".",
+    "allowImportingTsExtensions": true
+  },
+  "include": ["src", "tests"]
+}

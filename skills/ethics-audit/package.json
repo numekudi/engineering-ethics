@@ -1,0 +1,6 @@
+{
+  "//": "配布スキルが同梱する lib/*.js を ESM として実行させるための宣言。node がこの package.json を辿り type:module と解決する。",
+  "name": "engineering-ethics-audit",
+  "private": true,
+  "type": "module"
+}

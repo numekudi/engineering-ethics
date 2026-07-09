@@ -1,0 +1,18 @@
+{
+  "name": "ethics-audit-cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "技術者倫理 監査ハーネスの決定論的スクリプト（開発ソース・配布物には含めない）",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.check.json",
+    "gen": "node --experimental-strip-types src/gen/parse-se-code.ts",
+    "test": "node --import tsx --test \"tests/*.test.ts\""
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "tsx": "^4.23.0",
+    "typescript": "^7.0.2"
+  }
+}

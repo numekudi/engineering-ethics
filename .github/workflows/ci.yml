@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  cli:
+    name: CLI（typecheck / test / build 鮮度）
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: cli
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - name: 型チェック（strict TS / src・gen・tests）
+        run: npm run typecheck
+      - name: ユニットテスト
+        run: npm test
+      - name: build 出力（skills/ethics-audit/lib）が最新か
+        run: |
+          npm run build
+          cd ..
+          git diff --exit-code -- skills/ethics-audit/lib \
+            || (echo "::error::lib が src と一致しません。cli で npm run build してコミットしてください" && exit 1)
+
+  lint-skills:
+    name: スキル構造・綱領データの検証
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node --experimental-strip-types tools/lint-skills.ts

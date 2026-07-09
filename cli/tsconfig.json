@@ -1,0 +1,24 @@
+{
+  // ビルド用: src/ を skills/ethics-audit/lib へ ESM としてトランスパイルする。
+  // gen/（生成ツール）と tests/ は配布物に含めないため除外する。
+  "compilerOptions": {
+    "target": "es2022",
+    "lib": ["es2022"],
+    "types": ["node"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "verbatimModuleSyntax": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "declaration": false,
+    "sourceMap": false,
+    "rootDir": "src",
+    "outDir": "../skills/ethics-audit/lib"
+  },
+  "include": ["src"],
+  "exclude": ["src/gen"]
+}
